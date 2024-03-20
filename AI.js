@@ -39,10 +39,10 @@ document.getElementById('foodQuiz').onsubmit = function (event) {
 
 
     }
-    if (vegetarianValue == 'No') {
+    if (snackValue == 'No') {
         document.getElementById('answer_q5').textContent = 'Not snack';
     }
-    else if (vegetarianValue == 'Yes') {
+    else if (snackValue == 'Yes') {
         document.getElementById('answer_q5').textContent = 'Snack';
 
 
