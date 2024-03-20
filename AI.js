@@ -5,54 +5,30 @@ document.getElementById('foodQuiz').onsubmit = function (event) {
 
     var sweetValue = document.querySelector('input[name="sweet"]:checked').value;
     var healthyValue = document.querySelector('input[name="healthy"]:checked').value;
-    var spicyValue = document.querySelector('input[name="spicy"]:checked').value;
-    var vegetarianValue = document.querySelector('input[name="vegetarian"]:checked').value;
     var snackValue = document.querySelector('input[name="snack"]:checked').value;
-    // Display the answer in the paragraph with id="answer_q1"
-    if (sweetValue == 'No') {
-        document.getElementById('answer_q1').textContent = 'Not sweet';
-    }
-    else if (sweetValue == 'Yes') {
-        document.getElementById('answer_q1').textContent = 'Sweet';
 
+    if (sweetValue == 'Yes' && healthyValue == 'Yes' && snackValue == 'Yes') {
+        window.location.href = 'Recepies/Peanut_Butter_Energy_Balls.html';
     }
-    if (healthyValue == 'No') {
-        document.getElementById('answer_q2').textContent = 'Not healty';
+    else if (sweetValue == 'Yes' && healthyValue == 'Yes' && snackValue == 'No') {
+        window.location.href = 'Recepies/Sweet_Potato_and_Chickpea_Buddha.html';
     }
-    else if (healthyValue == 'Yes') {
-        document.getElementById('answer_q2').textContent = 'Healty';
-
+    else if (sweetValue == 'Yes' && healthyValue == 'No' && snackValue == 'Yes') {
+        window.location.href = 'Recepies/Chocolate_Cake.html';
     }
-    if (spicyValue == 'No') {
-        document.getElementById('answer_q3').textContent = 'Not Spicy';
+    else if (sweetValue == 'Yes' && healthyValue == 'No' && snackValue == 'No') {
+        window.location.href = 'Recepies/French_Toast_with_a_Sweet_Berry.html';
     }
-    else if (spicyValue == 'Yes') {
-        document.getElementById('answer_q3').textContent = 'Spicy';
-
-
+    else if (sweetValue == 'No' && healthyValue == 'No' && snackValue == 'No') {
+        window.location.href = 'Recepies/Red_Pasta.html';
     }
-    if (vegetarianValue == 'No') {
-        document.getElementById('answer_q4').textContent = 'Not vegetarian';
+    else if (sweetValue == 'No' && healthyValue == 'Yes' && snackValue == 'No') {
+        window.location.href = 'Recepies/Grilled_Salmon.html';
     }
-    else if (vegetarianValue == 'Yes') {
-        document.getElementById('answer_q4').textContent = 'Vegetarian';
-
-
+    else if (sweetValue == 'No' && healthyValue == 'No' && snackValue == 'Yes') {
+        window.location.href = 'Recepies/Cheese_Stuffed.html';
     }
-    if (snackValue == 'No') {
-        document.getElementById('answer_q5').textContent = 'Not snack';
+    else if (sweetValue == 'No' && healthyValue == 'Yes' && snackValue == 'Yes') {
+        window.location.href = 'Recepies/Avocado_Chickpea.html';
     }
-    else if (snackValue == 'Yes') {
-        document.getElementById('answer_q5').textContent = 'Snack';
-
-
-    }
-
 };
-document.getElementById('foodQuiz').onreset= function(){
-    document.getElementById('answer_q1').textContent = '';
-    document.getElementById('answer_q2').textContent = '';
-    document.getElementById('answer_q3').textContent = '';
-    document.getElementById('answer_q4').textContent = '';
-    document.getElementById('answer_q5').textContent = '';
-}
