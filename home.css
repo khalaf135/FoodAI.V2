@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #384434;
+    color: #f0f2f5;
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    /* Set position to relative for absolute positioning reference */
+    padding-top: 100px;
+    /* Increase top padding to make space for auth buttons */
+}
+
+h1,
+h3 {
+    color: #43768a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    background-color: #43768a;
+    color: #384434;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+
+
+img {
+    border-radius: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* to give the photo a shadow */
+}
+
+p {
+    margin-top: 30px;
+}
+
+a {
+    color: #5A92A5;
+    text-decoration: none;
+}
+
+.left-align {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+
+.auth-button {
+    background-color: #5A92A5;
+    color: #384434;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    text-decoration: none;
+    /* Remove underline from links */
+}
