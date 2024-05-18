@@ -1,8 +1,8 @@
 document.getElementById('foodQuiz').addEventListener('submit', function(event) {
     event.preventDefault();
     var sweetValue = document.querySelector('input[name="sweet"]:checked').value;
-var healthyValue = document.querySelector('input[name="healthy"]:checked').value;
-var snackValue = document.querySelector('input[name="snack"]:checked').value;
+    var healthyValue = document.querySelector('input[name="healthy"]:checked').value;
+    var snackValue = document.querySelector('input[name="snack"]:checked').value;
 
 if (sweetValue == 'Yes' && healthyValue == 'Yes' && snackValue == 'Yes') {
     window.location.href = 'Recepies/Peanut_Butter_Energy_Balls.html';
@@ -30,11 +30,3 @@ else if (sweetValue == 'No' && healthyValue == 'Yes' && snackValue == 'Yes') {
 }
 });
 
-document.querySelectorAll('input[type="radio"]').forEach(radio => {
-    radio.addEventListener('change', function() {
-        var questionId = 'question' + this.name.charAt(0).toUpperCase() + this.name.slice(1);
-        var questionSpan = document.getElementById(questionId);
-        questionSpan.textContent = questionSpan.textContent.replace(/😊|😢$/, '');
-        questionSpan.textContent += this.value === 'Yes' ? ' 😊' : ' 😢';
-    });
-});
